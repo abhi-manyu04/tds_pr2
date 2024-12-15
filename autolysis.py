@@ -159,7 +159,7 @@ def column_summary(df):
     
     return summary_df
 
-def write(content):
+def write_to_readme(content):
     try:
         markdown_content = content['choices'][0]['message']['content']
         readme_path = os.path.join(directory_name, 'README.md')
@@ -208,7 +208,7 @@ def main(file_path):
     """
     response = req_llm(prompt)
 
-    write(response)
+    write_to_readme(response)
 
 
 
